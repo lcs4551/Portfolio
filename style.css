@@ -424,3 +424,25 @@ ul {
 .testimonial_speech-bubble a {
   color: var(--color-pink);
 }
+
+/* Contact */
+#contact {
+  background-color: var(--color-pink);
+}
+
+.contact_title,
+.contact_email,
+.contact_rights {
+  color: var(--color-white);
+}
+
+.contact_link {
+  font-size: var(--font-large);
+  margin: 20px 0;
+}
+
+.contact_link i:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow);
+  transition: all var(--animation-speed) ease-in;
+}
