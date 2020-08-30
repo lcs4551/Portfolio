@@ -31,6 +31,14 @@
   --size-border-radious: 4px;
 }
 
+/* button */
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Typography */
 
 h1 {
@@ -111,5 +119,34 @@ ul {
 
 .navbar_menu_item:hover {
   background-color: var(--color-dark-pink);
+  border-radius: var(--size-border-radious);
+}
+
+/* Home */
+#home {
+  background: url('imgs/Background/Lee\ &\ Company.png') center/cover no-repeat;
+  text-align: center;
+  padding: 100px;
+}
+
+.home_avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+
+.home_title,
+.home_description {
+  color: white;
+}
+
+.home_button {
+  color: var(--color-white);
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
   border-radius: var(--size-border-radious);
 }
