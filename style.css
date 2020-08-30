@@ -29,6 +29,9 @@
 
   /* Size */
   --size-border-radious: 4px;
+
+  /* Animation */
+  --animation-speed: 300ms;
 }
 
 /* button */
@@ -149,4 +152,74 @@ ul {
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radious);
+}
+
+/* section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.about_majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0px;
+}
+
+.major_icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  color: var(--color-blue);
+  line-height: 170px;
+  border: var(--color-blue) 2px solid;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+.major_icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.2);
+  transition: var(--animation-speed);
+}
+
+.major_title,
+.major_description {
+  color: var(--color-dark-grey);
+}
+
+.major_description {
+  font-size: var(--font-small);
+}
+
+.job_logo {
+  width: 80px;
+  height: 80px;
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job__description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.job_name,
+.job_period {
+  color: var(--color-light-grey);
+}
+
+.job_name {
+  font-size: var(--font-small);
+}
+
+.job_period {
+  font-size: var(--font-micro);
 }
