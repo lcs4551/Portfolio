@@ -99,7 +99,7 @@ ul {
   justify-content: space-between;
   background-color: var(--color-pink);
   align-items: center;
-  padding: 10px;
+  padding: 16px;
 }
 
 .navbar_logo {
@@ -109,22 +109,30 @@ ul {
 
 .navbar_menu {
   display: flex;
-  color: var(--color-white);
 }
 
 .navbar_menu_item {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
-  border: var(--color-white) 2px solid;
-  border-radius: var(--size-border-radious);
+  color: var(--color-white);
+  text-align: center;
 }
 
 .navbar_menu_item:hover {
   background-color: var(--color-dark-pink);
+  border: var(--color-white) 2px solid;
   border-radius: var(--size-border-radious);
 }
 
+.navbar_toggle-btn {
+  position: absolute;
+  right: 32px;
+  top: 20px;
+  font-size: var(--font-medium);
+  color: var(--color-white);
+  display: none;
+}
 /* Home */
 #home {
   background: url('imgs/Background/Lee\ &\ Company.png') center/cover no-repeat;
@@ -445,4 +453,44 @@ ul {
   transform: scale(1.1);
   color: var(--color-yellow);
   transition: all var(--animation-speed) ease-in;
+}
+
+/* for below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar_toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar_menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .about_majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+
+  .testimonial_avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
