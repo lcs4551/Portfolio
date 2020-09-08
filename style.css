@@ -144,6 +144,9 @@ ul {
   transition
 }
 
+
+
+
 /* Home */
 #home {
   background: url('imgs/Background/Lee\ &\ Company.png') center/cover no-repeat;
@@ -174,9 +177,6 @@ ul {
   border-radius: var(--size-border-radious);
 }
 
-.fadeOut {
-  opacity: 1;
-}
 
 /* section common */
 .section {
@@ -469,6 +469,22 @@ ul {
   transform: scale(1.1);
   color: var(--color-yellow);
   transition: all var(--animation-speed) ease-in;
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 100px;
+  color: var(--color-blue);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visable {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* for below 768px screen width */

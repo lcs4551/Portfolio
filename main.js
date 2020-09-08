@@ -50,12 +50,31 @@ homeContctBtn.addEventListener('click', () => {
 });
 
 // make heme slowly fade to transparent as the window scrolls down
+// element.style.string으로 작성하면 JS에서 직접적으로 CSS 적용이 가능하다.
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+// show "arrow up"button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+console.log(arrowUp);
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add('visable');
+  } else {
+    arrowUp.classList.remove('visable');
+  }
+});
+
+// page up to home whe click the aroow button
+arrowUp.addEventListener('click', () => {
+  ScrollIntoView('#home');
+  console.log('클릭');
+});
+
+// Method를 function으로 만들어 사용 가능하다.
 function ScrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
