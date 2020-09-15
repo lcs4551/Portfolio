@@ -35,7 +35,6 @@ const navbarMenu = document.querySelector('.navbar_menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
-  console.log(link);
   if (link === undefined) {
     return;
   } else {
@@ -72,6 +71,31 @@ document.addEventListener('scroll', () => {
 arrowUp.addEventListener('click', () => {
   ScrollIntoView('#home');
   console.log('클릭');
+});
+
+console.clear();
+// Projects
+const workBtnContainer = document.querySelector('.work_categories');
+const projectContainer = document.querySelector('.work_projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter === undefined) {
+    return;
+  }
+  projectContainer.classList.add('anim-out');
+
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anim-out');
+  }, 300);
 });
 
 // Method를 function으로 만들어 사용 가능하다.

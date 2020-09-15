@@ -141,11 +141,8 @@ ul {
 #navbar.navbar--black {
   background-color: var(--color-blue);
   padding: 8px;
-  transition
+  transition: all 400ms ease-in-out;
 }
-
-
-
 
 /* Home */
 #home {
@@ -176,7 +173,6 @@ ul {
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radious);
 }
-
 
 /* section common */
 .section {
@@ -345,10 +341,17 @@ ul {
   top: 0;
 }
 
-.wor_projects {
+.work_projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-speed) ease-out;
+}
+
+.work_projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -401,6 +404,10 @@ ul {
   left: 50%;
   margin-left: -12px;
   margin-top: 8px;
+}
+
+.project.invisible {
+  display: none;
 }
 
 /* tesimonial */
