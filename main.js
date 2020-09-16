@@ -78,14 +78,22 @@ console.clear();
 const workBtnContainer = document.querySelector('.work_categories');
 const projectContainer = document.querySelector('.work_projects');
 const projects = document.querySelectorAll('.project');
+const categoryBtns = document.querySelectorAll('.category_btn');
 
 workBtnContainer.addEventListener('click', (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter === undefined) {
     return;
   }
-  projectContainer.classList.add('anim-out');
 
+  // Remove selection from the previous item and select the new one
+  const active = document.querySelector('.category_btn.selected');
+  active.classList.remove('selected');
+  const target =
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
+
+  projectContainer.classList.add('anim-out');
   setTimeout(() => {
     projects.forEach((project) => {
       if (filter === '*' || filter === project.dataset.type) {

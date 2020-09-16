@@ -314,7 +314,7 @@ ul {
   padding: 8px 48px;
 }
 
-.category_btn.active,
+.category_btn.selected,
 .category_btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
@@ -335,7 +335,7 @@ ul {
   transition: all var(--animation-speed);
 }
 
-.category_btn.active .category_count,
+.category_btn.selected .category_count,
 .category_btn:hover .category_count {
   opacity: 1;
   top: 0;
